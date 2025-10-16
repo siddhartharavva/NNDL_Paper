@@ -1,0 +1,20 @@
+
+============================================================
+ðŸ”¬ ABLATION STUDY RESULTS
+============================================================
+
+ðŸ“Š NOVEL_CNN_ABLATION RESULTS:
+----------------------------------------
+ðŸ† Best Configuration:
+   Learning Rate: 1e-03
+   Batch Size: 1
+   Depth: 4
+   Base Channels: 32
+   Final Loss: 0.754836
+   Training Time: 3.49s
+
+ðŸ“ˆ Hyperparameter Impact Analysis:
+   Learning Rate Impact:
+      1e-05: 1.899924 (Â±0.782466)
+      1e-04: 1.674351 (Â±0.538962)
+      1e-03: 1.172306 (Â±0.233838)

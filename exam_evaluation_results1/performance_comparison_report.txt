@@ -1,0 +1,22 @@
+
+================================================================================
+ðŸ“Š COMPREHENSIVE MODEL COMPARISON REPORT
+================================================================================
+
+Model           MSE      PSNR     SSIM     Temp_Cons  Time(s)   
+----------------------------------------------------------------------
+Novel_STAU_Net  1.4313   -1.06    0.077    0.871      0.040     
+DeepCAD_Baseline 1.9520   -2.31    0.011    0.897      0.035     
+
+==================================================
+ðŸ† BEST MODEL ANALYSIS:
+==================================================
+ðŸ† Best MSE: Novel_STAU_Net (1.4313)
+ðŸ† Best PSNR: Novel_STAU_Net (-1.0574)
+ðŸ† Best SSIM: Novel_STAU_Net (0.0768)
+ðŸ† Best TEMPORAL_CONSISTENCY: DeepCAD_Baseline (0.8967)
+ðŸ† Best INFERENCE_TIME: DeepCAD_Baseline (0.0352)
+
+ðŸ“‹ OVERALL RECOMMENDATION:
+------------------------------
+ðŸ† Recommended Model: Novel_STAU_Net (wins 3/5 metrics)

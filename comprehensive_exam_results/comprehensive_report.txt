@@ -1,0 +1,70 @@
+================================================================================
+ðŸŽ¯ COMPREHENSIVE ABLATION STUDY REPORT
+================================================================================
+
+ðŸ“Š DATASET SUMMARY:
+------------------------------
+Training data shape: (1500, 490, 490)
+Training data SNR: 6.20 dB
+F0 data shape: (1500, 490, 490), SNR: 43.63 dB
+F1 data shape: (1500, 490, 490), SNR: 6.50 dB
+F2 data shape: (1500, 490, 490), SNR: 1.72 dB
+F3 data shape: (1500, 490, 490), SNR: -1.11 dB
+
+ðŸ† BEST PERFORMING CONFIGURATIONS:
+----------------------------------------
+
+F1 (Noise Level: Low):
+  ðŸ¥‡ Best Model: DeepCAD
+     - Learning Rate: 1e-04
+     - PSNR: 15.41 Â± 1.80 dB
+     - SSIM: 0.456 Â± 0.102
+     - Inference Time: 0.014 s
+
+F2 (Noise Level: Medium):
+  ðŸ¥‡ Best Model: DeepCAD
+     - Learning Rate: 1e-04
+     - PSNR: 12.26 Â± 2.19 dB
+     - SSIM: 0.209 Â± 0.065
+     - Inference Time: 0.014 s
+
+F3 (Noise Level: High):
+  ðŸ¥‡ Best Model: NovelCNN
+     - Channels: 32, Depth: 4
+     - Learning Rate: 1e-04
+     - PSNR: 11.88 Â± 2.31 dB
+     - SSIM: 0.051 Â± 0.017
+     - Inference Time: 0.007 s
+
+ðŸ“ˆ HYPERPARAMETER IMPACT ANALYSIS:
+----------------------------------------
+
+Learning Rate Impact (Novel CNN):
+  1e-05: PSNR = 7.58 Â± 0.38 (3.0 configs)
+  1e-04: PSNR = 6.69 Â± 4.73 (12.0 configs)
+
+Base Channels Impact (Novel CNN):
+  16: PSNR = 3.69 Â± 0.25 (3.0 configs)
+  32: PSNR = 6.60 Â± 4.53 (9.0 configs)
+  64: PSNR = 10.84 Â± 1.63 (3.0 configs)
+
+ðŸ†š MODEL COMPARISON:
+--------------------
+Average Performance Across All Validation Sets:
+
+DeepCAD:
+  PSNR: 9.33 Â± 3.94 dB
+  SSIM: 0.070 Â± 0.195
+  Time: 0.013 Â± 0.001 s
+
+NovelCNN:
+  PSNR: 6.87 Â± 4.21 dB
+  SSIM: -0.042 Â± 0.140
+  Time: 0.007 Â± 0.001 s
+
+ðŸ’¡ RECOMMENDATIONS:
+--------------------
+ðŸ† Best Overall Configuration:
+   Model: DeepCAD
+   Learning Rate: 1e-04
+   Best PSNR: 15.41 dB on F1

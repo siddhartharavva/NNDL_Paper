@@ -1,0 +1,355 @@
+ CNNDEEPCADDNN.py
+🚀 Using device: mps
+🎯 CALCIUM IMAGING DENOISING - COMPREHENSIVE THREE-MODEL EVALUATION
+🧠 Novel STAU-Net | 🔬 DeepCAD | 🎯 DnCNN
+================================================================================
+📁 Training file: Train/A1.tif
+📂 Validation directory: Validation
+📊 Output directory: comprehensive_three_model_results
+🔄 Epochs per configuration: 2
+💾 Device: mps
+📂 Loading datasets...
+📂 Loading: Train/A1.tif
+📊 Original shape: (1500, 490, 490)
+📈 Value range: [-247.000, 13306.000]
+✅ Normalized to [0, 1]
+📂 Loading: Validation/F0.tif
+📊 Original shape: (1500, 490, 490)
+📈 Value range: [0.000, 15635.000]
+✅ Normalized to [0, 1]
+✅ Loaded F0.tif: (1500, 490, 490)
+📂 Loading: Validation/F1.tif
+📊 Original shape: (1500, 490, 490)
+📈 Value range: [-258.000, 17198.000]
+✅ Normalized to [0, 1]
+✅ Loaded F1.tif: (1500, 490, 490)
+📂 Loading: Validation/F2.tif
+📊 Original shape: (1500, 490, 490)
+📈 Value range: [-286.000, 20001.000]
+✅ Normalized to [0, 1]
+✅ Loaded F2.tif: (1500, 490, 490)
+📂 Loading: Validation/F3.tif
+📊 Original shape: (1500, 490, 490)
+📈 Value range: [-283.000, 25006.000]
+✅ Normalized to [0, 1]
+✅ Loaded F3.tif: (1500, 490, 490)
+🔬 STARTING COMPREHENSIVE ABLATION STUDY
+🧠 Novel STAU-Net | 🔬 DeepCAD | 🎯 DnCNN
+============================================================
+📊 Configuration 1/16
+🔧 Config: {'model': 'NovelCNN', 'base_channels': 16, 'depth': 3, 'lr': 0.0001, 'batch_size': 2}
+🧠 Initializing Novel STAU-Net:
+   - Base channels: 16
+   - Depth: 3
+   - Input channels: 1
+   - Total parameters: 162,452
+Epoch 1: Loss = 0.741952, LR = 1.00e-04                                                                                    
+Epoch 2: Loss = 0.699226, LR = 1.00e-04                                                                                    
+🔍 Evaluating on F1...
+🔍 Evaluating NovelCNN_F1...
+Validating NovelCNN_F1: 100%|██████████████████████████████████████████████████████████████| 50/50 [00:09<00:00,  5.54it/s]
+🔍 Evaluating on F2...
+🔍 Evaluating NovelCNN_F2...
+Validating NovelCNN_F2: 100%|██████████████████████████████████████████████████████████████| 50/50 [00:05<00:00,  8.71it/s]
+🔍 Evaluating on F3...
+🔍 Evaluating NovelCNN_F3...
+Validating NovelCNN_F3: 100%|██████████████████████████████████████████████████████████████| 50/50 [00:01<00:00, 25.50it/s]
+💾 Model saved: comprehensive_three_model_results/NovelCNN_ch16_d3_lr1e-04.pth
+📊 Configuration 2/16
+🔧 Config: {'model': 'NovelCNN', 'base_channels': 32, 'depth': 3, 'lr': 0.0001, 'batch_size': 2}
+🧠 Initializing Novel STAU-Net:
+   - Base channels: 32
+   - Depth: 3
+   - Input channels: 1
+   - Total parameters: 646,144
+Epoch 1: Loss = 0.986772, LR = 1.00e-04                                                                                    
+Epoch 2: Loss = 0.654852, LR = 1.00e-04                                                                                    
+🔍 Evaluating on F1...
+🔍 Evaluating NovelCNN_F1...
+Validating NovelCNN_F1: 100%|██████████████████████████████████████████████████████████████| 50/50 [00:02<00:00, 18.09it/s]
+🔍 Evaluating on F2...
+🔍 Evaluating NovelCNN_F2...
+Validating NovelCNN_F2: 100%|██████████████████████████████████████████████████████████████| 50/50 [00:02<00:00, 20.08it/s]
+🔍 Evaluating on F3...
+🔍 Evaluating NovelCNN_F3...
+Validating NovelCNN_F3: 100%|██████████████████████████████████████████████████████████████| 50/50 [00:01<00:00, 25.49it/s]
+💾 Model saved: comprehensive_three_model_results/NovelCNN_ch32_d3_lr1e-04.pth
+📊 Configuration 3/16
+🔧 Config: {'model': 'NovelCNN', 'base_channels': 32, 'depth': 4, 'lr': 0.0001, 'batch_size': 2}
+🧠 Initializing Novel STAU-Net:
+   - Base channels: 32
+   - Depth: 4
+   - Input channels: 1
+   - Total parameters: 2,615,875
+Epoch 1: Loss = 0.327839, LR = 1.00e-04                                                                                    
+Epoch 2: Loss = 0.190495, LR = 1.00e-04                                                                                    
+🔍 Evaluating on F1...
+🔍 Evaluating NovelCNN_F1...
+Validating NovelCNN_F1: 100%|██████████████████████████████████████████████████████████████| 50/50 [00:03<00:00, 13.21it/s]
+🔍 Evaluating on F2...
+🔍 Evaluating NovelCNN_F2...
+Validating NovelCNN_F2: 100%|██████████████████████████████████████████████████████████████| 50/50 [00:02<00:00, 18.18it/s]
+🔍 Evaluating on F3...
+🔍 Evaluating NovelCNN_F3...
+Validating NovelCNN_F3: 100%|██████████████████████████████████████████████████████████████| 50/50 [00:02<00:00, 19.34it/s]
+💾 Model saved: comprehensive_three_model_results/NovelCNN_ch32_d4_lr1e-04.pth
+📊 Configuration 4/16
+🔧 Config: {'model': 'NovelCNN', 'base_channels': 32, 'depth': 4, 'lr': 1e-05, 'batch_size': 2}
+🧠 Initializing Novel STAU-Net:
+   - Base channels: 32
+   - Depth: 4
+   - Input channels: 1
+   - Total parameters: 2,615,875
+Epoch 1: Loss = 0.296804, LR = 1.00e-05                                                                                    
+Epoch 2: Loss = 0.292343, LR = 1.00e-05                                                                                    
+🔍 Evaluating on F1...
+🔍 Evaluating NovelCNN_F1...
+Validating NovelCNN_F1: 100%|██████████████████████████████████████████████████████████████| 50/50 [00:02<00:00, 18.99it/s]
+🔍 Evaluating on F2...
+🔍 Evaluating NovelCNN_F2...
+Validating NovelCNN_F2: 100%|██████████████████████████████████████████████████████████████| 50/50 [00:02<00:00, 18.75it/s]
+🔍 Evaluating on F3...
+🔍 Evaluating NovelCNN_F3...
+Validating NovelCNN_F3: 100%|██████████████████████████████████████████████████████████████| 50/50 [00:02<00:00, 18.64it/s]
+💾 Model saved: comprehensive_three_model_results/NovelCNN_ch32_d4_lr1e-05.pth
+📊 Configuration 5/16
+🔧 Config: {'model': 'NovelCNN', 'base_channels': 64, 'depth': 4, 'lr': 0.0001, 'batch_size': 1}
+🧠 Initializing Novel STAU-Net:
+   - Base channels: 64
+   - Depth: 4
+   - Input channels: 1
+   - Total parameters: 10,448,891
+Epoch 1: Loss = 0.227840, LR = 1.00e-04                                                                                    
+Epoch 2: Loss = 0.128502, LR = 1.00e-04                                                                                    
+🔍 Evaluating on F1...
+🔍 Evaluating NovelCNN_F1...
+Validating NovelCNN_F1: 100%|██████████████████████████████████████████████████████████████| 50/50 [00:03<00:00, 13.48it/s]
+🔍 Evaluating on F2...
+🔍 Evaluating NovelCNN_F2...
+Validating NovelCNN_F2: 100%|██████████████████████████████████████████████████████████████| 50/50 [00:03<00:00, 12.93it/s]
+🔍 Evaluating on F3...
+🔍 Evaluating NovelCNN_F3...
+Validating NovelCNN_F3: 100%|██████████████████████████████████████████████████████████████| 50/50 [00:03<00:00, 12.70it/s]
+💾 Model saved: comprehensive_three_model_results/NovelCNN_ch64_d4_lr1e-04.pth
+📊 Configuration 6/16
+🔧 Config: {'model': 'DeepCAD', 'lr': 0.0001, 'batch_size': 2}
+🔬 Initializing DeepCAD Baseline...
+   - Total parameters: 1,401,969
+Epoch 1: Loss = 0.743577, LR = 1.00e-04                                                                                    
+Epoch 2: Loss = 0.498325, LR = 1.00e-04                                                                                    
+🔍 Evaluating on F1...
+🔍 Evaluating DeepCAD_F1...
+Validating DeepCAD_F1: 100%|███████████████████████████████████████████████████████████████| 50/50 [00:03<00:00, 15.13it/s]
+🔍 Evaluating on F2...
+🔍 Evaluating DeepCAD_F2...
+Validating DeepCAD_F2: 100%|███████████████████████████████████████████████████████████████| 50/50 [00:03<00:00, 14.87it/s]
+🔍 Evaluating on F3...
+🔍 Evaluating DeepCAD_F3...
+Validating DeepCAD_F3: 100%|███████████████████████████████████████████████████████████████| 50/50 [00:03<00:00, 15.47it/s]
+💾 Model saved: comprehensive_three_model_results/DeepCAD_lr1e-04_bs2.pth
+📊 Configuration 7/16
+🔧 Config: {'model': 'DeepCAD', 'lr': 1e-05, 'batch_size': 2}
+🔬 Initializing DeepCAD Baseline...
+   - Total parameters: 1,401,969
+Epoch 1: Loss = 0.183243, LR = 1.00e-05                                                                                    
+Epoch 2: Loss = 0.160878, LR = 1.00e-05                                                                                    
+🔍 Evaluating on F1...
+🔍 Evaluating DeepCAD_F1...
+Validating DeepCAD_F1: 100%|███████████████████████████████████████████████████████████████| 50/50 [00:03<00:00, 16.49it/s]
+🔍 Evaluating on F2...
+🔍 Evaluating DeepCAD_F2...
+Validating DeepCAD_F2: 100%|███████████████████████████████████████████████████████████████| 50/50 [00:03<00:00, 15.43it/s]
+🔍 Evaluating on F3...
+🔍 Evaluating DeepCAD_F3...
+Validating DeepCAD_F3: 100%|███████████████████████████████████████████████████████████████| 50/50 [00:02<00:00, 16.88it/s]
+💾 Model saved: comprehensive_three_model_results/DeepCAD_lr1e-05_bs2.pth
+📊 Configuration 8/16
+🔧 Config: {'model': 'DeepCAD', 'lr': 0.0001, 'batch_size': 1}
+🔬 Initializing DeepCAD Baseline...
+   - Total parameters: 1,401,969
+Epoch 1: Loss = 0.156087, LR = 1.00e-04                                                                                    
+Epoch 2: Loss = 0.098059, LR = 1.00e-04                                                                                    
+🔍 Evaluating on F1...
+🔍 Evaluating DeepCAD_F1...
+Validating DeepCAD_F1: 100%|███████████████████████████████████████████████████████████████| 50/50 [00:02<00:00, 16.76it/s]
+🔍 Evaluating on F2...
+🔍 Evaluating DeepCAD_F2...
+Validating DeepCAD_F2: 100%|███████████████████████████████████████████████████████████████| 50/50 [00:03<00:00, 15.71it/s]
+🔍 Evaluating on F3...
+🔍 Evaluating DeepCAD_F3...
+Validating DeepCAD_F3: 100%|███████████████████████████████████████████████████████████████| 50/50 [00:03<00:00, 16.43it/s]
+💾 Model saved: comprehensive_three_model_results/DeepCAD_lr1e-04_bs1.pth
+📊 Configuration 9/16
+🔧 Config: {'model': 'DnCNN', 'temporal_mode': '2d', 'num_layers': 17, 'num_features': 64, 'lr': 0.0001, 'batch_size': 2}
+🎯 Initializing DnCNN:
+   - Layers: 17
+   - Features: 64
+   - Temporal mode: 2d
+   - Total parameters: 556,032
+Epoch 1: Loss = 0.904982, LR = 1.00e-04                                                                                    
+Epoch 2: Loss = 0.140896, LR = 1.00e-04                                                                                    
+🔍 Evaluating on F1...
+🔍 Evaluating DnCNN_F1...
+Validating DnCNN_F1: 100%|█████████████████████████████████████████████████████████████████| 50/50 [00:03<00:00, 15.81it/s]
+🔍 Evaluating on F2...
+🔍 Evaluating DnCNN_F2...
+Validating DnCNN_F2: 100%|█████████████████████████████████████████████████████████████████| 50/50 [00:03<00:00, 15.15it/s]
+🔍 Evaluating on F3...
+🔍 Evaluating DnCNN_F3...
+Validating DnCNN_F3: 100%|█████████████████████████████████████████████████████████████████| 50/50 [00:03<00:00, 15.53it/s]
+💾 Model saved: comprehensive_three_model_results/DnCNN_2d_L17_F64_lr1e-04.pth
+📊 Configuration 10/16
+🔧 Config: {'model': 'DnCNN', 'temporal_mode': '2d', 'num_layers': 20, 'num_features': 64, 'lr': 0.0001, 'batch_size': 2}
+🎯 Initializing DnCNN:
+   - Layers: 20
+   - Features: 64
+   - Temporal mode: 2d
+   - Total parameters: 667,008
+Epoch 1: Loss = 0.438510, LR = 1.00e-04                                                                                    
+Epoch 2: Loss = 0.068904, LR = 1.00e-04                                                                                    
+🔍 Evaluating on F1...
+🔍 Evaluating DnCNN_F1...
+Validating DnCNN_F1: 100%|█████████████████████████████████████████████████████████████████| 50/50 [00:03<00:00, 15.04it/s]
+🔍 Evaluating on F2...
+🔍 Evaluating DnCNN_F2...
+Validating DnCNN_F2: 100%|█████████████████████████████████████████████████████████████████| 50/50 [00:03<00:00, 14.88it/s]
+🔍 Evaluating on F3...
+🔍 Evaluating DnCNN_F3...
+Validating DnCNN_F3: 100%|█████████████████████████████████████████████████████████████████| 50/50 [00:03<00:00, 14.03it/s]
+💾 Model saved: comprehensive_three_model_results/DnCNN_2d_L20_F64_lr1e-04.pth
+📊 Configuration 11/16
+🔧 Config: {'model': 'DnCNN', 'temporal_mode': '2d', 'num_layers': 17, 'num_features': 128, 'lr': 0.0001, 'batch_size': 1}
+🎯 Initializing DnCNN:
+   - Layers: 17
+   - Features: 128
+   - Temporal mode: 2d
+   - Total parameters: 2,217,984
+Epoch 1: Loss = 0.410350, LR = 1.00e-04                                                                                    
+Epoch 2: Loss = 0.053496, LR = 1.00e-04                                                                                    
+🔍 Evaluating on F1...
+🔍 Evaluating DnCNN_F1...
+Validating DnCNN_F1: 100%|█████████████████████████████████████████████████████████████████| 50/50 [00:06<00:00,  8.24it/s]
+🔍 Evaluating on F2...
+🔍 Evaluating DnCNN_F2...
+Validating DnCNN_F2: 100%|█████████████████████████████████████████████████████████████████| 50/50 [00:05<00:00,  8.43it/s]
+🔍 Evaluating on F3...
+🔍 Evaluating DnCNN_F3...
+Validating DnCNN_F3: 100%|█████████████████████████████████████████████████████████████████| 50/50 [00:06<00:00,  8.25it/s]
+💾 Model saved: comprehensive_three_model_results/DnCNN_2d_L17_F128_lr1e-04.pth
+📊 Configuration 12/16
+🔧 Config: {'model': 'DnCNN', 'temporal_mode': '2d', 'num_layers': 17, 'num_features': 64, 'lr': 1e-05, 'batch_size': 2}
+🎯 Initializing DnCNN:
+   - Layers: 17
+   - Features: 64
+   - Temporal mode: 2d
+   - Total parameters: 556,032
+Epoch 1: Loss = 0.804400, LR = 1.00e-05                                                                                    
+Epoch 2: Loss = 0.700965, LR = 1.00e-05                                                                                    
+🔍 Evaluating on F1...
+🔍 Evaluating DnCNN_F1...
+Validating DnCNN_F1: 100%|█████████████████████████████████████████████████████████████████| 50/50 [00:03<00:00, 15.12it/s]
+🔍 Evaluating on F2...
+🔍 Evaluating DnCNN_F2...
+Validating DnCNN_F2: 100%|█████████████████████████████████████████████████████████████████| 50/50 [00:03<00:00, 15.32it/s]
+🔍 Evaluating on F3...
+🔍 Evaluating DnCNN_F3...
+Validating DnCNN_F3: 100%|█████████████████████████████████████████████████████████████████| 50/50 [00:03<00:00, 16.33it/s]
+💾 Model saved: comprehensive_three_model_results/DnCNN_2d_L17_F64_lr1e-05.pth
+📊 Configuration 13/16
+🔧 Config: {'model': 'DnCNN', 'temporal_mode': '3d', 'num_layers': 12, 'num_features': 32, 'lr': 0.0001, 'batch_size': 1}
+🎯 Initializing DnCNN:
+   - Layers: 12
+   - Features: 32
+   - Temporal mode: 3d
+   - Total parameters: 278,848
+Epoch 1: Loss = 0.835236, LR = 1.00e-04                                                                                    
+Epoch 2: Loss = 0.061028, LR = 1.00e-04                                                                                    
+🔍 Evaluating on F1...
+🔍 Evaluating DnCNN_F1...
+Validating DnCNN_F1: 100%|█████████████████████████████████████████████████████████████████| 50/50 [00:05<00:00,  9.59it/s]
+🔍 Evaluating on F2...
+🔍 Evaluating DnCNN_F2...
+Validating DnCNN_F2: 100%|█████████████████████████████████████████████████████████████████| 50/50 [00:05<00:00,  8.42it/s]
+🔍 Evaluating on F3...
+🔍 Evaluating DnCNN_F3...
+Validating DnCNN_F3: 100%|█████████████████████████████████████████████████████████████████| 50/50 [00:04<00:00, 10.26it/s]
+💾 Model saved: comprehensive_three_model_results/DnCNN_3d_L12_F32_lr1e-04.pth
+📊 Configuration 14/16
+🔧 Config: {'model': 'DnCNN', 'temporal_mode': '3d', 'num_layers': 15, 'num_features': 48, 'lr': 0.0001, 'batch_size': 1}
+🎯 Initializing DnCNN:
+   - Layers: 15
+   - Features: 48
+   - Temporal mode: 3d
+   - Total parameters: 812,544
+Epoch 1: Loss = 0.372237, LR = 1.00e-04                                                                                    
+Epoch 2: Loss = 0.047327, LR = 1.00e-04                                                                                    
+🔍 Evaluating on F1...
+🔍 Evaluating DnCNN_F1...
+Validating DnCNN_F1: 100%|█████████████████████████████████████████████████████████████████| 50/50 [00:11<00:00,  4.19it/s]
+🔍 Evaluating on F2...
+🔍 Evaluating DnCNN_F2...
+Validating DnCNN_F2: 100%|█████████████████████████████████████████████████████████████████| 50/50 [00:12<00:00,  4.16it/s]
+🔍 Evaluating on F3...
+🔍 Evaluating DnCNN_F3...
+Validating DnCNN_F3: 100%|█████████████████████████████████████████████████████████████████| 50/50 [00:11<00:00,  4.19it/s]
+💾 Model saved: comprehensive_three_model_results/DnCNN_3d_L15_F48_lr1e-04.pth
+📊 Configuration 15/16
+🔧 Config: {'model': 'DnCNN', 'temporal_mode': 'hybrid', 'num_layers': 16, 'num_features': 64, 'lr': 0.0001, 'batch_size': 2}
+🎯 Initializing DnCNN:
+   - Layers: 16
+   - Features: 64
+   - Temporal mode: hybrid
+   - Total parameters: 531,520
+Epoch 1: Loss = 0.436200, LR = 1.00e-04                                                                                    
+Epoch 2: Loss = 0.093124, LR = 1.00e-04                                                                                    
+🔍 Evaluating on F1...
+🔍 Evaluating DnCNN_F1...
+Validating DnCNN_F1: 100%|█████████████████████████████████████████████████████████████████| 50/50 [00:03<00:00, 14.40it/s]
+🔍 Evaluating on F2...
+🔍 Evaluating DnCNN_F2...
+Validating DnCNN_F2: 100%|█████████████████████████████████████████████████████████████████| 50/50 [00:03<00:00, 14.70it/s]
+🔍 Evaluating on F3...
+🔍 Evaluating DnCNN_F3...
+Validating DnCNN_F3: 100%|█████████████████████████████████████████████████████████████████| 50/50 [00:03<00:00, 15.42it/s]
+💾 Model saved: comprehensive_three_model_results/DnCNN_hybrid_L16_F64_lr1e-04.pth
+📊 Configuration 16/16
+🔧 Config: {'model': 'DnCNN', 'temporal_mode': 'hybrid', 'num_layers': 20, 'num_features': 64, 'lr': 1e-05, 'batch_size': 2}
+🎯 Initializing DnCNN:
+   - Layers: 20
+   - Features: 64
+   - Temporal mode: hybrid
+   - Total parameters: 679,488
+Epoch 1: Loss = 1.166198, LR = 1.00e-05                                                                                    
+Epoch 2: Loss = 0.939498, LR = 1.00e-05                                                                                    
+🔍 Evaluating on F1...
+🔍 Evaluating DnCNN_F1...
+Validating DnCNN_F1: 100%|█████████████████████████████████████████████████████████████████| 50/50 [00:03<00:00, 13.56it/s]
+🔍 Evaluating on F2...
+🔍 Evaluating DnCNN_F2...
+Validating DnCNN_F2: 100%|█████████████████████████████████████████████████████████████████| 50/50 [00:03<00:00, 13.05it/s]
+🔍 Evaluating on F3...
+🔍 Evaluating DnCNN_F3...
+Validating DnCNN_F3: 100%|█████████████████████████████████████████████████████████████████| 50/50 [00:03<00:00, 14.35it/s]
+💾 Model saved: comprehensive_three_model_results/DnCNN_hybrid_L20_F64_lr1e-05.pth
+📊 Comprehensive results saved to: comprehensive_three_model_results/comprehensive_ablation_results_all_models.csv
+📋 Comprehensive report saved to: comprehensive_three_model_results/comprehensive_all_models_report.txt
+================================================================================🎯 COMPREHENSIVE ABLATION STUDY - ALL MODELS COMPARISON🧠 Novel STAU-Net | 🔬 DeepCAD | 🎯 DnCNN================================================================================📊 DATASET SUMMARY:------------------------------Training data shape: (1500, 490, 490)Training data SNR: 6.20 dBF0 data shape: (1500, 490, 490), SNR: 43.63 dBF1 data shape: (1500, 490, 490), SNR: 6.50 dBF2 data shape: (1500, 490, 490), SNR: 1.72 dBF3 data shape: (1500, 490, 490), SNR: -1.11 dB🏆 BEST PERFORMING CONFIGURATIONS (ALL MODELS):--------------------------------------------------👑 OVERALL CHAMPION:   Model: DnCNN   PSNR: 15.69 ± 0.40 dB   SSIM: 0.528 ± 0.116   Validation Set: F1 (Low noise)🏅 Best NovelCNN:   PSNR: 13.01 ± 2.88 dB   SSIM: 0.191 ± 0.098   Validation Set: F1   Config: 64 channels, depth 4   Learning Rate: 1e-04   Inference Time: 0.009 s🏅 Best DeepCAD:   PSNR: 15.41 ± 1.80 dB   SSIM: 0.456 ± 0.102   Validation Set: F1   Learning Rate: 1e-04   Inference Time: 0.012 s🏅 Best DnCNN:   PSNR: 15.69 ± 0.40 dB   SSIM: 0.528 ± 0.116   Validation Set: F1   Config: 3d mode, 15 layers, 48 features   Learning Rate: 1e-04   Inference Time: 0.005 s📈 PERFORMANCE BY NOISE LEVEL:----------------------------------------Low Noise:   🥇 Best: DnCNN - PSNR: 15.69 dB   📊 DeepCAD: 10.64 dB avg (3 configs)   📊 DnCNN: 11.34 dB avg (8 configs)   📊 NovelCNN: 7.21 dB avg (5 configs)Medium Noise:   🥇 Best: DnCNN - PSNR: 12.85 dB   📊 DeepCAD: 9.31 dB avg (3 configs)   📊 DnCNN: 9.96 dB avg (8 configs)
+... (full report saved to file) ...
+🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉
+✅ COMPREHENSIVE THREE-MODEL EVALUATION COMPLETED!
+🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉
+📊 Results Summary:
+• Total configurations tested: 16
+• Total validation runs: 48
+• Models compared: Novel CNN, DeepCAD, DnCNN
+• Best PSNR achieved: 15.69 dB
+• Best SSIM achieved: 0.528
+🏆 Model Performance Summary:
+• DeepCAD: Avg 9.33 dB, Max 15.41 dB (9 configs)
+• DnCNN: Avg 10.18 dB, Max 15.69 dB (24 configs)
+• NovelCNN: Avg 6.92 dB, Max 13.01 dB (15 configs)
+📁 Output files generated:
+• comprehensive_ablation_results_all_models.csv - Complete results
+• comprehensive_all_models_report.txt - Detailed analysis
+• *.pth - Model checkpoints
+🎯 Ready for comprehensive presentation!

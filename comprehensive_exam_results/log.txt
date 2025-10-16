@@ -1,0 +1,273 @@
+python3 ciDe2.py
+ðŸš€ Using device: mps
+ðŸŽ¯ CALCIUM IMAGING DENOISING - COMPREHENSIVE EVALUATION
+================================================================================
+ðŸ“ Training file: Train/A1.tif
+ðŸ“‚ Validation directory: Validation
+ðŸ“Š Output directory: comprehensive_exam_results
+ðŸ”„ Epochs per configuration: 2
+ðŸ’¾ Device: mps
+ðŸ“‚ Loading datasets...
+ðŸ“‚ Loading: Train/A1.tif
+ðŸ“Š Original shape: (1500, 490, 490)
+ðŸ“ˆ Value range: [-247.000, 13306.000]
+âœ… Normalized to [0, 1]
+ðŸ“‚ Loading: Validation/F0.tif
+ðŸ“Š Original shape: (1500, 490, 490)
+ðŸ“ˆ Value range: [0.000, 15635.000]
+âœ… Normalized to [0, 1]
+âœ… Loaded F0.tif: (1500, 490, 490)
+ðŸ“‚ Loading: Validation/F1.tif
+ðŸ“Š Original shape: (1500, 490, 490)
+ðŸ“ˆ Value range: [-258.000, 17198.000]
+âœ… Normalized to [0, 1]
+âœ… Loaded F1.tif: (1500, 490, 490)
+ðŸ“‚ Loading: Validation/F2.tif
+ðŸ“Š Original shape: (1500, 490, 490)
+ðŸ“ˆ Value range: [-286.000, 20001.000]
+âœ… Normalized to [0, 1]
+âœ… Loaded F2.tif: (1500, 490, 490)
+ðŸ“‚ Loading: Validation/F3.tif
+ðŸ“Š Original shape: (1500, 490, 490)
+ðŸ“ˆ Value range: [-283.000, 25006.000]
+âœ… Normalized to [0, 1]
+âœ… Loaded F3.tif: (1500, 490, 490)
+
+ðŸ”¬ STARTING ABLATION STUDY
+==================================================
+
+ðŸ“Š Configuration 1/8: {'model': 'NovelCNN', 'base_channels': 16, 'depth': 3, 'lr': 0.0001, 'batch_size': 2}
+ðŸ§  Initializing Novel STAU-Net:
+   - Base channels: 16
+   - Depth: 3
+   - Input channels: 1
+   - Total parameters: 162,452
+python3(5889) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+Epoch 1: Loss = 0.741952, LR = 1.00e-04                                                                                                                
+Epoch 2: Loss = 0.699226, LR = 1.00e-04                                                                                                                
+ðŸ” Evaluating on F1...
+ðŸ” Evaluating NovelCNN_F1...
+Validating NovelCNN_F1: 100%|██████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:03<00:00, 12.75it/s]
+ðŸ” Evaluating on F2...
+ðŸ” Evaluating NovelCNN_F2...
+Validating NovelCNN_F2: 100%|██████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:02<00:00, 17.18it/s]
+ðŸ” Evaluating on F3...
+ðŸ” Evaluating NovelCNN_F3...
+Validating NovelCNN_F3: 100%|██████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:01<00:00, 27.48it/s]
+ðŸ’¾ Model saved: comprehensive_exam_results/NovelCNN_ch16_d3_lr1e-04.pth
+
+ðŸ“Š Configuration 2/8: {'model': 'NovelCNN', 'base_channels': 32, 'depth': 3, 'lr': 0.0001, 'batch_size': 2}
+ðŸ§  Initializing Novel STAU-Net:
+   - Base channels: 32
+   - Depth: 3
+   - Input channels: 1
+   - Total parameters: 646,144
+Epoch 1: Loss = 0.986772, LR = 1.00e-04                                                                                                                
+Epoch 2: Loss = 0.654852, LR = 1.00e-04                                                                                                                
+ðŸ” Evaluating on F1...
+ðŸ” Evaluating NovelCNN_F1...
+Validating NovelCNN_F1: 100%|██████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:02<00:00, 16.76it/s]
+ðŸ” Evaluating on F2...
+ðŸ” Evaluating NovelCNN_F2...
+Validating NovelCNN_F2: 100%|██████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:02<00:00, 19.40it/s]
+ðŸ” Evaluating on F3...
+ðŸ” Evaluating NovelCNN_F3...
+Validating NovelCNN_F3: 100%|██████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:02<00:00, 22.04it/s]
+ðŸ’¾ Model saved: comprehensive_exam_results/NovelCNN_ch32_d3_lr1e-04.pth
+
+ðŸ“Š Configuration 3/8: {'model': 'NovelCNN', 'base_channels': 32, 'depth': 4, 'lr': 0.0001, 'batch_size': 2}
+ðŸ§  Initializing Novel STAU-Net:
+   - Base channels: 32
+   - Depth: 4
+   - Input channels: 1
+   - Total parameters: 2,615,875
+Epoch 1: Loss = 0.327839, LR = 1.00e-04                                                                                                                
+Epoch 2: Loss = 0.190495, LR = 1.00e-04                                                                                                                
+ðŸ” Evaluating on F1...
+ðŸ” Evaluating NovelCNN_F1...
+Validating NovelCNN_F1: 100%|██████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:02<00:00, 19.10it/s]
+ðŸ” Evaluating on F2...
+ðŸ” Evaluating NovelCNN_F2...
+Validating NovelCNN_F2: 100%|██████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:02<00:00, 19.17it/s]
+ðŸ” Evaluating on F3...
+ðŸ” Evaluating NovelCNN_F3...
+Validating NovelCNN_F3: 100%|██████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:02<00:00, 19.16it/s]
+ðŸ’¾ Model saved: comprehensive_exam_results/NovelCNN_ch32_d4_lr1e-04.pth
+
+ðŸ“Š Configuration 4/8: {'model': 'NovelCNN', 'base_channels': 32, 'depth': 4, 'lr': 1e-05, 'batch_size': 2}
+ðŸ§  Initializing Novel STAU-Net:
+   - Base channels: 32
+   - Depth: 4
+   - Input channels: 1
+   - Total parameters: 2,615,875
+Epoch 1: Loss = 0.296804, LR = 1.00e-05                                                                                                                
+Epoch 2: Loss = 0.292343, LR = 1.00e-05                                                                                                                
+ðŸ” Evaluating on F1...
+ðŸ” Evaluating NovelCNN_F1...
+Validating NovelCNN_F1: 100%|██████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:02<00:00, 18.07it/s]
+ðŸ” Evaluating on F2...
+ðŸ” Evaluating NovelCNN_F2...
+Validating NovelCNN_F2: 100%|██████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:02<00:00, 18.16it/s]
+ðŸ” Evaluating on F3...
+ðŸ” Evaluating NovelCNN_F3...
+Validating NovelCNN_F3: 100%|██████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:02<00:00, 18.56it/s]
+ðŸ’¾ Model saved: comprehensive_exam_results/NovelCNN_ch32_d4_lr1e-05.pth
+
+ðŸ“Š Configuration 5/8: {'model': 'NovelCNN', 'base_channels': 64, 'depth': 4, 'lr': 0.0001, 'batch_size': 1}
+ðŸ§  Initializing Novel STAU-Net:
+   - Base channels: 64
+   - Depth: 4
+   - Input channels: 1
+   - Total parameters: 10,448,891
+Epoch 1: Loss = 0.227817, LR = 1.00e-04                                                                                                                
+Epoch 2: Loss = 0.128087, LR = 1.00e-04                                                                                                                
+ðŸ” Evaluating on F1...
+ðŸ” Evaluating NovelCNN_F1...
+Validating NovelCNN_F1: 100%|██████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:03<00:00, 13.49it/s]
+ðŸ” Evaluating on F2...
+ðŸ” Evaluating NovelCNN_F2...
+Validating NovelCNN_F2: 100%|██████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:03<00:00, 12.97it/s]
+ðŸ” Evaluating on F3...
+ðŸ” Evaluating NovelCNN_F3...
+Validating NovelCNN_F3: 100%|██████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:04<00:00, 12.17it/s]
+ðŸ’¾ Model saved: comprehensive_exam_results/NovelCNN_ch64_d4_lr1e-04.pth
+
+ðŸ“Š Configuration 6/8: {'model': 'DeepCAD', 'lr': 0.0001, 'batch_size': 2}
+ðŸ”¬ Initializing DeepCAD Baseline...
+   - Total parameters: 1,401,969
+Epoch 1: Loss = 0.743577, LR = 1.00e-04                                                                                                                
+Epoch 2: Loss = 0.498325, LR = 1.00e-04                                                                                                                
+ðŸ” Evaluating on F1...
+ðŸ” Evaluating DeepCAD_F1...
+Validating DeepCAD_F1: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:03<00:00, 14.61it/s]
+ðŸ” Evaluating on F2...
+ðŸ” Evaluating DeepCAD_F2...
+Validating DeepCAD_F2: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:03<00:00, 15.29it/s]
+ðŸ” Evaluating on F3...
+ðŸ” Evaluating DeepCAD_F3...
+Validating DeepCAD_F3: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:03<00:00, 14.76it/s]
+ðŸ’¾ Model saved: comprehensive_exam_results/DeepCAD_chX_dX_lr1e-04.pth
+
+ðŸ“Š Configuration 7/8: {'model': 'DeepCAD', 'lr': 1e-05, 'batch_size': 2}
+ðŸ”¬ Initializing DeepCAD Baseline...
+   - Total parameters: 1,401,969
+Epoch 1: Loss = 0.183243, LR = 1.00e-05                                                                                                                
+Epoch 2: Loss = 0.160878, LR = 1.00e-05                                                                                                                
+ðŸ” Evaluating on F1...
+ðŸ” Evaluating DeepCAD_F1...
+Validating DeepCAD_F1: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:03<00:00, 15.43it/s]
+ðŸ” Evaluating on F2...
+ðŸ” Evaluating DeepCAD_F2...
+Validating DeepCAD_F2: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:03<00:00, 15.04it/s]
+ðŸ” Evaluating on F3...
+ðŸ” Evaluating DeepCAD_F3...
+Validating DeepCAD_F3: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:03<00:00, 16.53it/s]
+ðŸ’¾ Model saved: comprehensive_exam_results/DeepCAD_chX_dX_lr1e-05.pth
+
+ðŸ“Š Configuration 8/8: {'model': 'DeepCAD', 'lr': 0.0001, 'batch_size': 1}
+ðŸ”¬ Initializing DeepCAD Baseline...
+   - Total parameters: 1,401,969
+Epoch 1: Loss = 0.156087, LR = 1.00e-04                                                                                                                
+Epoch 2: Loss = 0.098059, LR = 1.00e-04                                                                                                                
+ðŸ” Evaluating on F1...
+ðŸ” Evaluating DeepCAD_F1...
+Validating DeepCAD_F1: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:03<00:00, 14.75it/s]
+ðŸ” Evaluating on F2...
+ðŸ” Evaluating DeepCAD_F2...
+Validating DeepCAD_F2: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:03<00:00, 14.16it/s]
+ðŸ” Evaluating on F3...
+ðŸ” Evaluating DeepCAD_F3...
+Validating DeepCAD_F3: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 50/50 [00:04<00:00, 12.46it/s]
+ðŸ’¾ Model saved: comprehensive_exam_results/DeepCAD_chX_dX_lr1e-04.pth
+
+ðŸ“Š Detailed results saved to: comprehensive_exam_results/detailed_ablation_results.csv
+
+ðŸ“‹ Comprehensive report saved to: comprehensive_exam_results/comprehensive_report.txt
+
+================================================================================
+ðŸŽ¯ COMPREHENSIVE ABLATION STUDY REPORT
+================================================================================
+
+ðŸ“Š DATASET SUMMARY:
+------------------------------
+Training data shape: (1500, 490, 490)
+Training data SNR: 6.20 dB
+F0 data shape: (1500, 490, 490), SNR: 43.63 dB
+F1 data shape: (1500, 490, 490), SNR: 6.50 dB
+F2 data shape: (1500, 490, 490), SNR: 1.72 dB
+F3 data shape: (1500, 490, 490), SNR: -1.11 dB
+
+ðŸ† BEST PERFORMING CONFIGURATIONS:
+----------------------------------------
+
+F1 (Noise Level: Low):
+  ðŸ¥‡ Best Model: DeepCAD
+     - Learning Rate: 1e-04
+     - PSNR: 15.41 Â± 1.80 dB
+     - SSIM: 0.456 Â± 0.102
+     - Inference Time: 0.014 s
+
+F2 (Noise Level: Medium):
+  ðŸ¥‡ Best Model: DeepCAD
+     - Learning Rate: 1e-04
+     - PSNR: 12.26 Â± 2.19 dB
+     - SSIM: 0.209 Â± 0.065
+     - Inference Time: 0.014 s
+
+F3 (Noise Level: High):
+  ðŸ¥‡ Best Model: NovelCNN
+     - Channels: 32, Depth: 4
+     - Learning Rate: 1e-04
+     - PSNR: 11.88 Â± 2.31 dB
+     - SSIM: 0.051 Â± 0.017
+     - Inference Time: 0.007 s
+
+ðŸ“ˆ HYPERPARAMETER IMPACT ANALYSIS:
+----------------------------------------
+
+Learning Rate Impact (Novel CNN):
+  1e-05: PSNR = 7.58 Â± 0.38 (3.0 configs)
+  1e-04: PSNR = 6.69 Â± 4.73 (12.0 configs)
+
+Base Channels Impact (Novel CNN):
+  16: PSNR = 3.69 Â± 0.25 (3.0 configs)
+  32: PSNR = 6.60 Â± 4.53 (9.0 configs)
+  64: PSNR = 10.84 Â± 1.63 (3.0 configs)
+
+ðŸ†š MODEL COMPARISON:
+--------------------
+Average Performance Across All Validation Sets:
+
+DeepCAD:
+  PSNR: 9.33 Â± 3.94 dB
+  SSIM: 0.070 Â± 0.195
+  Time: 0.013 Â± 0.001 s
+
+NovelCNN:
+  PSNR: 6.87 Â± 4.21 dB
+  SSIM: -0.042 Â± 0.140
+  Time: 0.007 Â± 0.001 s
+
+ðŸ’¡ RECOMMENDATIONS:
+--------------------
+ðŸ† Best Overall Configuration:
+   Model: DeepCAD
+   Learning Rate: 1e-04
+   Best PSNR: 15.41 dB on F1
+
+ðŸŽ‰ðŸŽ‰ðŸŽ‰ðŸŽ‰ðŸŽ‰ðŸŽ‰ðŸŽ‰ðŸŽ‰ðŸŽ‰ðŸŽ‰ðŸŽ‰ðŸŽ‰ðŸŽ‰ðŸŽ‰ðŸŽ‰ðŸŽ‰ðŸŽ‰ðŸŽ‰ðŸŽ‰ðŸŽ‰
+âœ… COMPREHENSIVE EVALUATION COMPLETED!
+ðŸŽ‰ðŸŽ‰ðŸŽ‰ðŸŽ‰ðŸŽ‰ðŸŽ‰ðŸŽ‰ðŸŽ‰ðŸŽ‰ðŸŽ‰ðŸŽ‰ðŸŽ‰ðŸŽ‰ðŸŽ‰ðŸŽ‰ðŸŽ‰ðŸŽ‰ðŸŽ‰ðŸŽ‰ðŸŽ‰
+
+ðŸ“Š Results Summary:
+â€¢ Total configurations tested: 8
+â€¢ Total validation runs: 24
+â€¢ Best PSNR achieved: 15.41 dB
+â€¢ Best SSIM achieved: 0.456
+
+ðŸ“ Output files generated:
+â€¢ detailed_ablation_results.csv - Complete CSV log of all results
+â€¢ comprehensive_report.txt - Summary report
+â€¢ *.pth - Model checkpoints for each configuration
+
+ðŸŽ¯ Ready for exam presentation!
