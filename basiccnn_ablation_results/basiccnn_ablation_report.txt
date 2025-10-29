@@ -1,0 +1,35 @@
+============================================================
+BasicScratchCNN Ablation Study Report
+============================================================
+Training data shape: (1500, 490, 490)
+F0: Shape=(1500, 490, 490)
+F1: Shape=(1500, 490, 490)
+F2: Shape=(1500, 490, 490)
+F3: Shape=(1500, 490, 490)
+
+Best Configurations (max PSNR per noise):
+
+Noise: F1 Low
+  Layers: 4, Features: 64
+  LR: 1e-04, Batch: 1
+  PSNR: 17.86 (+/- 1.42)
+  SSIM: 0.612 (+/- 0.105)
+  Inference Time: 0.001 s
+
+Noise: F2 Medium
+  Layers: 4, Features: 64
+  LR: 1e-04, Batch: 1
+  PSNR: 16.41 (+/- 1.62)
+  SSIM: 0.404 (+/- 0.057)
+  Inference Time: 0.001 s
+
+Noise: F3 High
+  Layers: 4, Features: 64
+  LR: 1e-04, Batch: 1
+  PSNR: 15.50 (+/- 3.08)
+  SSIM: 0.240 (+/- 0.042)
+  Inference Time: 0.001 s
+
+Best Overall:
+  Layers: 4, Features: 64, LR: 1e-04
+  PSNR: 17.86 dB on F1

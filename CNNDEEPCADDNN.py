@@ -1,20 +1,4 @@
 
-"""
-CALCIUM IMAGING DENOISING - COMPLETE EXAM IMPLEMENTATION WITH DnCNN
-===================================================================
-
-Features:
-- Novel CNN from scratch (STAU-Net) 
-- DeepCAD Baseline
-- DnCNN (Denoising CNN) - New Addition
-- Validation with ground truth (F0.tif) vs noisy data (F1-F3.tif)
-- Complete ablation study with CSV logging
-- Comprehensive performance evaluation
-
-Author: Your Name
-Date: October 16, 2025
-"""
-
 import os
 import numpy as np
 import torch
@@ -987,7 +971,7 @@ class ComprehensiveTrainer:
                 progress_bar.set_postfix({"Loss": f"{loss.item():.6f}"})
 
                 # Limit batches for speed
-                if batch_idx >= 20:
+                if batch_idx >= 100:
                     break
 
             avg_loss = np.mean(epoch_losses)
@@ -1232,7 +1216,6 @@ def main():
         print(f"• comprehensive_all_models_report.txt - Detailed analysis")
         print(f"• *.pth - Model checkpoints")
 
-        print(f"🎯 Ready for comprehensive presentation!")
 
         return results_df
 
